@@ -66,7 +66,7 @@ export default defineConfig({
 
 这里vite配置重点在`extensions`，他的默认值是`['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json']`，加了`.vue`让他支持vue文件。
 
-官方*不建议忽略自定义导入类型的扩展名（例如：`.vue`），因为它会影响 IDE 和类型支持。*但可能是因为用的js所以并没发现有什么影响。
+官方 *不建议忽略自定义导入类型的扩展名（例如：`.vue`），因为它会影响 IDE 和类型支持。* 但可能是因为用的js所以并没发现有什么影响。
 
 ### vue-router
 
@@ -361,7 +361,7 @@ gogocode -s ./views -t gogocode-plugin-vue -o ./views-out
 
 #### import Vue from 'vue'
 
-`import Vue from 'vue'`理论上应该可以用`getCurrentInstance`去代替。但官方提醒*`getCurrentInstance` 只暴露给高阶使用场景，典型的比如在库中。强烈反对在应用的代码中使用 `getCurrentInstance`。请**不要**把它当作在组合式 API 中获取 `this` 的替代方案来使用。*
+`import Vue from 'vue'`理论上应该可以用`getCurrentInstance`去代替。但官方提醒 *`getCurrentInstance` 只暴露给高阶使用场景，典型的比如在库中。强烈反对在应用的代码中使用 `getCurrentInstance`。请**不要**把它当作在组合式 API 中获取 `this` 的替代方案来使用。* 
 
 ##### 解决方案
 
