@@ -417,7 +417,7 @@ export default debounceDirective;
 
 #### src里的require
 
-vue3因不支持require不能写像`<img :src="require(`@/assets/imgs/${name}`)" alt="">`这种引入，替代方案：
+vue3因不支持require不能写像``<img :src="require(`@/assets/imgs/${name}`)" alt="">``这种引入，替代方案：
 
 ```
 <img :src="getImg(name)" alt="">
