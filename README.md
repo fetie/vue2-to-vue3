@@ -415,6 +415,20 @@ export default debounceDirective;
 
 但是有些时候不一定要用这种方法解决，在其他js文件内转化`import Vue from 'vue'`可以具体问题具体分析，使用其他方式解决。
 
+#### src里的require
+
+vue3因不支持require不能写像`<img :src="require(`@/assets/imgs/${name}`)" alt="">`这种引入，替代方案：
+
+```
+<img :src="getImg(name)" alt="">
+
+getImg(name){
+  const path='/src/assets/imgs/'+name+'.png'
+  const module=import.meta.globEager('/src/assets/imgs/*')
+  return module[path].default
+}
+```
+
 #### input事件
 
 `emit('input',val)`要替换为`emit('uplate:value',val)`，并且对应标签的`v-model`换为`v-model:value`
