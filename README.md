@@ -428,6 +428,15 @@ getImg(name){
   return module[path].default
 }
 ```
+或者
+
+```
+<img :src="getImg(name)" alt="">
+
+getImg(name){
+    return new URL(`/src/assets/${name}.jpg`, import.meta.url).href
+}
+```
 
 #### input事件
 
